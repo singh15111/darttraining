@@ -17,9 +17,11 @@ void main(List<String> arguments) {
   print(c);
   c = (a % b).toDouble();
 
-  print(c);
+ print(c);
+
   result = a < b;
   print(result);
+  
   result = a > b;
   print(result);
 
