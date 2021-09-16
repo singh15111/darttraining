@@ -2,27 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class ButtonFunction extends StatelessWidget {
-  Function _function,_clear;
-  String _title,_cleartitle;
-  ButtonFunction(this._function,this._clear,this._cleartitle, this._title);
+  Function _caluca, _clear;
+  String _Calucate, _Clear;
+  ButtonFunction(this._caluca, this._clear, this._Calucate, this._Clear);
   @override
   Widget build(BuildContext context) {
-    return Row( children: [ Expanded( 
-      child: ElevatedButton(
-          onPressed: () {
-            _function();
-          },
-          child: Text(_title)),
-    ),
-    
-    Expanded( 
-      child: ElevatedButton(
-          onPressed: () {
-            _clear();
-          },
-          child: Text(_cleartitle)),
-    ),
-    
+    return Row(children: [
+      Expanded(
+        child: ElevatedButton(
+            onPressed: () {
+              _caluca();
+            },
+            child: Text(_Calucate)),
+      ),
+      Expanded(
+        child: ElevatedButton(
+            onPressed: () {
+              _clear();
+            },
+            child: Text(_Clear)),
+      ),
     ]);
   }
 }

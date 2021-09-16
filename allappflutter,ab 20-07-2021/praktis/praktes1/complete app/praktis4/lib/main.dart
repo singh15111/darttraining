@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:praktis4/myhomepage.dart';
-import 'inputsecondtextfile.dart';
-
-
 
 void main() {
   runApp(MyApp());

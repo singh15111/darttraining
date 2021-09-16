@@ -1,11 +1,7 @@
-import 'dart:html';
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:praktis4/buttonfunction.dart';
 
 import 'package:praktis4/inputsecondtextfile.dart';
-import 'inputtextedit.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key}) : super(key: key);
@@ -49,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Colors.cyanAccent,
         title: Text(
-          "INTEREST AND CALU APP",
+          "PINDA JATT",
           style: TextStyle(color: Colors.deepOrangeAccent),
         ),
       ),
@@ -60,9 +56,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 _monthsController, "label", "hint", Colors.black, 8.4),
             Text(
               '$res',
-              style: TextStyle(color: Colors.orangeAccent, fontSize: 45),
+              style: TextStyle(
+                  color: Colors.cyan,
+                  fontSize: 45,
+                  backgroundColor: Colors.black),
             ),
-            ButtonFunction(_calucaButton, _clear, "_cleartitle", "_title"),
+            ButtonFunction(_calucaButton, _clear, "Clear" , "Calculate"),
           ],
         ),
       ),

@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:praktis4/buttonfunction.dart';
+import 'package:praktis4/calucater.dart';
 
 import 'package:praktis4/inputsecondtextfile.dart';
 import 'inputtextedit.dart';
@@ -42,6 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _caluCater() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => Calucater()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +64,27 @@ class _MyHomePageState extends State<MyHomePage> {
             InputSecondText(_amountController, _interestamountController,
                 _monthsController, "label", "hint", Colors.black, 8.4),
             Text('$res'),
-            ButtonFunction(_calucaButton, _clear, "_cleartitle", "_title"),
+            ButtonFunction(_calucaButton, _clear, "Caluca", "Clear"),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Center(
+                child: Column(
+                  children: [
+                    ElevatedButton(
+                        onPressed: () {
+                          _caluCater();
+                        },
+                        child: Text(
+                          "data",
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 22.2),
+                        ))
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
