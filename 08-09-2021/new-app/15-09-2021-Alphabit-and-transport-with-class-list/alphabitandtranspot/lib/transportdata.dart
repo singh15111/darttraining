@@ -1,4 +1,8 @@
+
+import 'package:flutter/material.dart';
+
 class TransportData {
-  String title, image;
+  String title;
+   Icon image;
   TransportData(this.title,this.image);
 }

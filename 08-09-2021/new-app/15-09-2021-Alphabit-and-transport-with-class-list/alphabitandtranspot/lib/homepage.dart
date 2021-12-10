@@ -20,20 +20,29 @@ class _HomePageState extends State<HomePage> {
   void catagorysButton(int index) {
     setState(() {
       select = data[index];
+      debugPrint(select.names);
       switch (select.names) {
-        case " TransportData":
+        case "Transport":
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) =>
-                      CatagoryDetailPage(AllCatagory.transportdata)));
+                  builder: (context) => CatagoryDetailPage(
+                      AllCatagory.transportdata, select.names)));
           break;
-        case "AlphabitData":
+        case "Alphabit":
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => CatagoryDetailPage(
+                      AllCatagory.alphabitdata, select.names)));
+          break;
+
+        case "Veg":
           Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) =>
-                      CatagoryDetailPage(AllCatagory.alphabitdata)));
+                      CatagoryDetailPage(AllCatagory.vegdata, select.names)));
           break;
       }
     });
@@ -54,6 +63,7 @@ class _HomePageState extends State<HomePage> {
             return ListTile(
               title: Text(catagoryname.names),
               onTap: () {
+                debugPrint("im rr");
                 catagorysButton(indext);
               },
             );
